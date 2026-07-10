@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """This module provides functions for cleaning and
 preprocessing telecom dataset features."""
-import pandas as pd
 
 
 def clean_total_charges(df, method='drop'):
