@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""This module contains a function that visualizes missing
+values in a pandas DataFrame using a scatter plot."""
 import matplotlib.pyplot as plt
 import numpy as np
 
