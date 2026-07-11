@@ -27,5 +27,5 @@ def chi_square_tests(df):
         # You need p-value that is the second one
         p = calc[1]
         # Store the result in the result variable
-        result[table[i]] = float(p)
+        result[table[i]] = p
     return result
