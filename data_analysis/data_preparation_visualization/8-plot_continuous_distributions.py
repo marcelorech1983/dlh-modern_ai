@@ -34,7 +34,7 @@ def plot_continuous_distributions(df, columns_to_plot=None):
         # 200 evenly spaced x-points to draw the curve smoothly
         x_range = np.linspace(data.min(), data.max(), 200)
         # Draw the KDE curve on top of the histogram, in red
-        axes[i, 0].plot(x_range, kde(x_range), color='red')
+        axes[i, 0].plot(x_range, kde(x_range), color='red', ls='--')
         # Set the titles for the histogram left subplot
         axes[i, 0].set_title(f"{col} Histogram + KDE")
         # Right subplot: horizontal boxplot (auto-computed stats)
