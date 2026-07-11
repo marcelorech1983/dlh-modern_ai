@@ -14,9 +14,7 @@ def plot_numeric_vs_churn(df, col):
     churn_yes = df[df['Churn'] == 'Yes'][col]
 
     # Overlapping histograms, one per group
-    plt.hist(churn_no, bins=30, alpha=0.7, label='No')
-    plt.hist(churn_yes, bins=30, alpha=0.7, label='Yes')
-
+    plt.hist([churn_no, churn_yes], bins=30, label=['No', 'Yes'])
     # Give a name for x label
     plt.xlabel(f"{col}")
     # Give a name for the title
