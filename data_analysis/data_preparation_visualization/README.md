@@ -7,25 +7,25 @@ Exploratory data analysis and preprocessing pipeline on the Telco Customer Churn
 | # | Task | File | Status |
 |---|---|---|---|
 | 0 | Describe Data | `0-describe_data.py` | Done |
-| 1 | Visualize Missing Data | `1-plot_missingness.py` | Not done |
-| 2 | Changing Column Types | `2-convert_columns.py` | Not done |
-| 3 | Dropping vs Replacing vs Imputation | `3-clean_total_charges.py` | Not done |
-| 4 | Removing Duplicates | `4-remove_duplicates.py` | Not done |
-| 5 | Initial Dropping | `5-drop_customerID.py` | Not done |
-| 6 | Plot Target Distribution | `6-plot_churn_distribution.py` | Not done |
-| 7 | Plot Categorical Distributions | `7-plot_categorical_distributions.py` | Not done |
-| 8 | Plot Continuous Distributions | `8-plot_continuous_distributions.py` | Not done |
-| 9 | Plot Correlation Heatmap | `9-plot_correlation_heatmap.py` | Not done |
-| 10 | Plot Categorical vs Churn | `10-plot_categorical_vs_churn.py` | Not done |
-| 11 | Plot Numeric vs Churn | `11-plot_numeric_vs_churn.py` | Not done |
-| 12 | Chi-Square | `12-chi_square_tests.py` | Not done |
-| 13 | Welch's t-tests | `13-ttest_numeric.py` | Not done |
-| 14 | Binning and Feature Creation | `14-create_features.py` | Not done |
-| 15 | Encode features | `15-encode_features.py` | Not done |
-| 16 | Feature Scaling | `16-scale_numeric.py` | Not done |
-| 17 | Data Splitting | `17-split_data.py` | Not done |
+| 1 | Visualize Missing Data | `1-plot_missingness.py` | Done |
+| 2 | Changing Column Types | `2-convert_columns.py` | Done |
+| 3 | Dropping vs Replacing vs Imputation | `3-clean_total_charges.py` | Done |
+| 4 | Removing Duplicates | `4-remove_duplicates.py` | Done |
+| 5 | Initial Dropping | `5-drop_customerID.py` | Done |
+| 6 | Plot Target Distribution | `6-plot_churn_distribution.py` | Done |
+| 7 | Plot Categorical Distributions | `7-plot_categorical_distributions.py` | Done |
+| 8 | Plot Continuous Distributions | `8-plot_continuous_distributions.py` | Done |
+| 9 | Plot Correlation Heatmap | `9-plot_correlation_heatmap.py` | Done |
+| 10 | Plot Categorical vs Churn | `10-plot_categorical_vs_churn.py` | Done |
+| 11 | Plot Numeric vs Churn | `11-plot_numeric_vs_churn.py` | Done |
+| 12 | Chi-Square | `12-chi_square_tests.py` | Done |
+| 13 | Welch's t-tests | `13-ttest_numeric.py` | Done |
+| 14 | Binning and Feature Creation | `14-create_features.py` | Done |
+| 15 | Encode features | `15-encode_features.py` | Done |
+| 16 | Feature Scaling | `16-scale_numeric.py` | Done |
+| 17 | Data Splitting | `17-split_data.py` | Done |
 
-1 of 18 tasks complete.
+18 of 18 tasks complete.
 
 ## Dataset
 
