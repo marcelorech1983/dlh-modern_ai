@@ -14,7 +14,7 @@ def encode_features(df):
     df['Churn'] = le.fit_transform(df['Churn'])
 
     # Turn these Yes/No feature columns into 0/1 too
-    oe = preprocessing.OrdinalEncoder()
+    oe = preprocessing.OrdinalEncoder(categories=[['No', 'Yes']])
     ordinal_cols = ["Partner", "Dependents",
                     "PaperlessBilling", "SeniorCitizen"]
     df[ordinal_cols] = oe.fit_transform(df[ordinal_cols]).astype(int)
