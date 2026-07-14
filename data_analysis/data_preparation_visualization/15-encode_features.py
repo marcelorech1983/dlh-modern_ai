@@ -18,7 +18,8 @@ def encode_features(df):
                     "PaperlessBilling", "SeniorCitizen"]
     oe = preprocessing.OrdinalEncoder(
         categories=[['No', 'Yes']])
-    df[ordinal_cols] = oe.fit_transform(df[ordinal_cols]).astype(int)
+    for col in ordinal_cols:
+        df[[col]] = oe.fit_transform(df[[col]]).astype(int)
 
     # TenureGroup gets its own encoder, alphabetical order by default
     tenure_oe = preprocessing.OrdinalEncoder()
