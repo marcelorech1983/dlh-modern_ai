@@ -14,9 +14,10 @@ def encode_features(df):
     df['Churn'] = le.fit_transform(df['Churn'])
 
     # Turn these Yes/No feature columns into 0/1 too
-    oe = preprocessing.OrdinalEncoder(categories=[['No', 'Yes']])
     ordinal_cols = ["Partner", "Dependents",
                     "PaperlessBilling", "SeniorCitizen"]
+    oe = preprocessing.OrdinalEncoder(
+        categories=[['No', 'Yes']] * len(ordinal_cols))
     df[ordinal_cols] = oe.fit_transform(df[ordinal_cols]).astype(int)
 
     # TenureGroup gets its own encoder, alphabetical order by default
