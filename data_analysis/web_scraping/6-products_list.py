@@ -3,6 +3,7 @@
 scraping and collecting data from web resources."""
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 def scrape_products(url):
@@ -20,18 +21,16 @@ def scrape_products(url):
     time.sleep(1)
 
     products = []
-    # loop through every product card on the page
-    for card in driver.find_elements("class name", "thumbnail"):
-        title = card.find_element("class name", "title")
-        # star count is in data-rating, not in the visible text
+    for card in driver.find_elements(By.CLASS_NAME, "thumbnail"):
+        title = card.find_element(By.CLASS_NAME, "title")
         rating = card.find_element(
-            "css selector", ".ratings p[data-rating]"
+            By.CSS_SELECTOR, ".ratings p[data-rating]"
         )
         products.append({
             "title": title.get_attribute("title"),
-            "price": card.find_element("class name", "price").text,
+            "price": card.find_element(By.CLASS_NAME, "price").text,
             "description": card.find_element(
-                "class name", "description"
+                By.CLASS_NAME, "description"
             ).text,
             "rating": rating.get_attribute("data-rating"),
         })
