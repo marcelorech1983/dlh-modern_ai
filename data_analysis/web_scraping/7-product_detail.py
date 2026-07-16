@@ -34,7 +34,7 @@ def scrape_product_detail(url, delay=2.0):
 
     # each star is a <p>, count them for the rating
     stars = driver.find_elements(
-        "css selector", ".ratings p.ws-icon-star"
+        "css selector", ".ratings span.ws-icon-star"
     )
     rating = len(stars)
 
