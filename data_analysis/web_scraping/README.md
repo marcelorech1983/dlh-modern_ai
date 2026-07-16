@@ -7,16 +7,16 @@ Static and dynamic web scraping pipeline built on quotes.toscrape.com and webscr
 | # | Task | File | Status |
 |---|---|---|---|
 | 0 | Fetch HTML | `0-fetch_html.py` | Done |
-| 1 | Basic Static Scraping | `1-scrape_basic.py` | Not started |
-| 2 | Pagination Handling | `2-scrape_paginated.py` | Not started |
-| 3 | API-Based Scraping | `3-scrape_via_api.py` | Not started |
-| 4 | JSON-LD Extraction | `4-extract_jsonld.py` | Not started |
+| 1 | Basic Static Scraping | `1-scrape_basic.py` | Done |
+| 2 | Pagination Handling | `2-scrape_paginated.py` | Done |
+| 3 | API-Based Scraping | `3-scrape_via_api.py` | Done |
+| 4 | JSON-LD Extraction | `4-extract_jsonld.py` | Done |
 | 5 | Login & Scrape | `5-login_and_scrape.py` | Not started |
 | 6 | Scrape Static Products | `6-products_list.py` | Not started |
 | 7 | Scrape Single Product Detail | `7-product_detail.py` | Not started |
 | 8 | Scroll & Scrape Products | `8-scroll_and_scrape.py` | Not started |
 
-1 of 9 tasks complete.
+5 of 9 tasks complete.
 
 ## Targets
 
