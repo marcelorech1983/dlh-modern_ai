@@ -32,7 +32,7 @@ def scrape_products(url):
             "description": card.find_element(
                 "class name", "description"
             ).text,
-            "rating": rating.get_attribute("data-rating"),
+            "rating": int(rating.get_attribute("data-rating")),
         })
 
     return products
