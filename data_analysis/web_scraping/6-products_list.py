@@ -5,7 +5,7 @@ import time
 from selenium import webdriver
 
 
-def scrape_products_list(url):
+def products_list(url):
     """Launch a headless Chrome browser to scrape a static
     product page, using Selenium to extract titles, prices,
     descriptions, and ratings into a list of dictionaries."""
