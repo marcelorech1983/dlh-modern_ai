@@ -19,7 +19,7 @@ def scrape_basic(url):
 
     quotes = []
     for block in quote_blocks:
-       # Pull out the quote text and author name from this container
+        # Pull out the quote text and author name from this container
         text = block.find("span", class_="text").text
         author = block.find("small", class_="author").text
 
