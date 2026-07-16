@@ -11,9 +11,10 @@ def scrape_products(url):
     descriptions, and ratings into a list of dictionaries."""
     # headless + fixed window size, exactly what the task asks for
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless=new")
-    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1920,1080")
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
@@ -33,5 +34,5 @@ def scrape_products(url):
             ).text,
             "rating": rating.get_attribute("data-rating"),
         })
-        
+
     return products
