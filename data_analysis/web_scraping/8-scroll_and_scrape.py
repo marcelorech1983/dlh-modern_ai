@@ -53,7 +53,7 @@ def scroll_and_scrape(url, scroll_pause=2.0):
             "css selector", ".description"
         ).text
         rating = len(card.find_elements(
-            "css selector", ".ratings p.ws-icon-star"
+            "css selector", ".ratings span.ws-icon-star"
         ))
 
         products.append({
