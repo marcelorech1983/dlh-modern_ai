@@ -27,7 +27,7 @@ def scroll_and_scrape(url, scroll_pause=2.0):
             "window.scrollTo(0, document.body.scrollHeight);"
         )
         # wait for the next batch to load
-        time.sleep(scroll_pause)
+        time.sleep(min(scroll_pause, 0.5))
         new_height = driver.execute_script(
             "return document.body.scrollHeight"
         )
