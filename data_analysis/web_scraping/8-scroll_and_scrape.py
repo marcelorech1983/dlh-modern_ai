@@ -26,15 +26,23 @@ def scroll_and_scrape(url, scroll_pause=2.0):
         driver.execute_script(
             "window.scrollTo(0, document.body.scrollHeight);"
         )
-        # wait for the next batch to load
-        time.sleep(min(scroll_pause, 0.5))
-        new_height = driver.execute_script(
-            "return document.body.scrollHeight"
-        )
-        # height did not change -> reached the end
-        if new_height == last_height:
+        # poll for the next batch instead of waiting the full
+        # pause, so a fast page does not waste time each scroll
+        waited = 0.0
+        grew = False
+        while waited < scroll_pause:
+            time.sleep(0.2)
+            waited += 0.2
+            new_height = driver.execute_script(
+                "return document.body.scrollHeight"
+            )
+            if new_height > last_height:
+                last_height = new_height
+                grew = True
+                break
+        # no new content within scroll_pause -> reached the end
+        if not grew:
             break
-        last_height = new_height
 
     products = []
     seen = set()  # track (title, price) to skip duplicates
