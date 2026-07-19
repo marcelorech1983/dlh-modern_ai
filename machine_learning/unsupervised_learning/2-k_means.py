@@ -9,7 +9,8 @@ def K_Means(X, n_clusters, random_state):
     initializing and fitting a K-Means clustering model using Scikit-learn."""
     KMeans = cluster.KMeans
     # Set up the KMeans model structure
-    model = KMeans(n_clusters=n_clusters, random_state=random_state)
+    model = cluster.KMeans(n_clusters=n_clusters,
+                           random_state=random_state)
     # Train the model on the input dataset
     kmeans = model.fit(X)
     return kmeans
