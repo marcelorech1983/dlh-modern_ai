@@ -7,7 +7,6 @@ from sklearn import cluster
 def K_Means(X, n_clusters, random_state):
     """Group tabular data into a specified number of clusters by
     initializing and fitting a K-Means clustering model using Scikit-learn."""
-    KMeans = cluster.KMeans
     # Set up the KMeans model structure
     model = cluster.KMeans(n_clusters=n_clusters,
                            random_state=random_state)
