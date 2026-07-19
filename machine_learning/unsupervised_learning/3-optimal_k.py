@@ -13,6 +13,7 @@ def optimal_k(X, max_clusters, random_state):
     cluster_numbers = []
     inertias = []
     silhouettes = []
+
     # one model per k, from 2 up to max_clusters (inclusive)
     for k in range(2, max_clusters + 1):
         kmeans = K_Means(X, k, random_state)
