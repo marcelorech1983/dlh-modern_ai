@@ -17,5 +17,5 @@ def optimal_k(X, max_clusters, random_state):
         labels = kmeans.labels_
         cluster_numbers.append(k)
         inertias.append(kmeans.inertia_)
-        silhouettes.append(silhouette_score(X, labels))
+        silhouettes.append(metrics.silhouette_score(X, labels))
     return cluster_numbers, inertias, silhouettes
