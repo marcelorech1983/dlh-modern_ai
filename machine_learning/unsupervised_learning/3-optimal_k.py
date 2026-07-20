@@ -7,7 +7,7 @@ K_Means = __import__('2-k_means').K_Means
 
 
 def optimal_k(X, max_clusters, random_state):
-    """Evaluate K-Means clustering configurations from 2 up to
+    """Evaluate K-Means clustering configurations 2 up to
     a maximum number of clusters, calculating inertia and silhouette
     scores to help identify the ideal number of clusters."""
     cluster_numbers = []
