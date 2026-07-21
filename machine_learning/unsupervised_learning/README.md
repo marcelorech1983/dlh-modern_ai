@@ -7,12 +7,12 @@ Unsupervised learning pipeline on the Wine dataset: standardizing features, redu
 | # | Task | File | Status |
 |---|---|---|---|
 | 0 | Feature Standardization | `0-standardize.py` | Done |
-| 1 | Dimensionality Reduction with PCA | `1-pca.py` | Not started |
-| 2 | Clustering with K-Means | `2-k_means.py` | Not started |
-| 3 | Choosing the Optimal K for K-Means | `3-optimal_k.py` | Not started |
-| 4 | Agglomerative Hierarchical Clustering | `4-agglomerative.py` | Not started |
+| 1 | Dimensionality Reduction with PCA | `1-pca.py` | Done |
+| 2 | Clustering with K-Means | `2-k_means.py` | Done |
+| 3 | Choosing the Optimal K for K-Means | `3-optimal_k.py` | Done |
+| 4 | Agglomerative Hierarchical Clustering | `4-agglomerative.py` | Done |
 
-1 of 5 tasks complete.
+5 of 5 tasks complete.
 
 ## Dataset
 
