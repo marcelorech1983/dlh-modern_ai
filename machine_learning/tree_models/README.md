@@ -6,7 +6,7 @@ Tree-based classification pipeline on the Wine dataset: building, training, and 
 
 | # | Task | File | Status |
 |---|---|---|---|
-| 0 | Decision Tree Classifier | `0-build.py` | c |
+| 0 | Decision Tree Classifier | `0-build.py` | Done |
 | 1 | Train a Tree-Based Classifier | `1-train.py` | Done |
 | 2 | View the Decision Rules of a Trained Tree | `2-draw.py` | Done |
 | 3 | Generate Predictions | `3-generate_predictions.py` | Done |
