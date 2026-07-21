@@ -16,7 +16,7 @@ def prune_and_evaluate_trees(X_train, y_train, X_test, y_test,
     test_scores = []
 
     for alpha in ccp_alphas:
-        # Initialize classifier with pre-pruning params, ccp_alpha, and seed
+        # Initialize classifier
         clf = tree.DecisionTreeClassifier(
             min_samples_split=min_samples_split,
             min_samples_leaf=min_samples_leaf,
