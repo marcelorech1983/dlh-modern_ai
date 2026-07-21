@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """This module provides utilities for creating
 and training decision tree models."""
-from sklearn import tree
 
 
 def generate_predictions(clf, X):
