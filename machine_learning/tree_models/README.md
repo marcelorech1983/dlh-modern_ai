@@ -14,12 +14,12 @@ Tree-based classification pipeline on the Wine dataset: building, training, and 
 | 5 | Pre-Pruning | `5-pre_pruning.py` | Done |
 | 6 | (Post-Pruning) Retrieve the Pruning Path of a Decision Tree | `6-pruning_path.py` | Done |
 | 7 | (Post-Pruning) Train and Evaluate Decision Trees with Pruning | `7-prune_decision_tree.py` | Done |
-| 8 | (Post-Pruning) Best ccp_alpha for Pruning | `8-best_ccp_alpha.py` | Not started |
-| 9 | Random Forest Classifier | `9-random_forest.py` | Not started |
-| 10 | Feature Importance with Random Forest | `10-feature_importance.py` | Not started |
-| 11 | Boosting | `11-boosting.py` | Not started |
+| 8 | (Post-Pruning) Best ccp_alpha for Pruning | `8-best_ccp_alpha.py` | Done |
+| 9 | Random Forest Classifier | `9-random_forest.py` | Done |
+| 10 | Feature Importance with Random Forest | `10-feature_importance.py` | Done |
+| 11 | Boosting | `11-boosting.py` | Done |
 
-0 of 12 tasks complete.
+12 of 12 tasks complete.
 
 ## Dataset
 
