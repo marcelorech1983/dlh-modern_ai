@@ -8,6 +8,6 @@ def get_shap_explainer_and_values(model, X_train, X_test):
     """Set up a SHAP explainer using your training data and
     calculate explanation values to show how each feature
     impacts your model's predictions."""
-    explainer = shap.Explainer(model.predict, X_train)
+    explainer = shap.Explainer(model, X_train)
     shap_values = explainer(X_test)
     return explainer, shap_values
