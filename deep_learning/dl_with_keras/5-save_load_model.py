@@ -2,6 +2,7 @@
 """Introduction to Deep Learning with Keras.
 This module contains simple functions to build, train, and test
 neural networks using the Keras library."""
+from tensorflow import keras
 
 
 def save_model(model, filepath):
