@@ -9,5 +9,5 @@ def predict(model, X, verbose=0):
     """Generates predicted class labels for
     input data using a Keras model."""
     prob = model.predict(X, verbose=verbose)
-    predictions = tf.argmax(prob, axis=1).numpy().tolist()
+    predictions = tf.argmax(prob, axis=1)
     return predictions
