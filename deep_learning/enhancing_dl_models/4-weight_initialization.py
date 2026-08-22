@@ -9,12 +9,10 @@ def build_model_initializer_by_activation(
         input_dim, hidden_units, activation):
     """Builds a Keras model using weight initializers
     matched to the activation function."""
-    glorot_init = keras.initializers.GlorotUniform()
-    he_init = keras.initializers.HeNormal()
     if activation == "sigmoid" or activation == "tanh":
-        initializer = glorot_init
+        initializer = keras.initializers.GlorotUniform()
     elif activation == "relu" or activation == "leaky_relu":
-        initializer = he_init
+        initializer = keras.initializers.HeNormal()
     inputs = keras.Input(shape=(input_dim,))
     x = keras.layers.Dense(hidden_units, kernel_initializer=initializer,
                            activation=activation)(inputs)
