@@ -15,10 +15,9 @@ def build_model_initializer_by_activation(
         initializer = glorot_init
     elif activation == "relu" or activation == "leaky_relu":
         initializer = he_init
-    model = keras.Sequential([
-        keras.layers.Input(shape=(input_dim,)),
-        keras.layers.Dense(hidden_units, kernel_initializer=initializer,
-                           activation=activation),
-        keras.layers.Dense(10, activation="softmax"),
-    ])
+    inputs = keras.Input(shape=(input_dim,))
+    x = keras.layers.Dense(hidden_units, kernel_initializer=initializer,
+                           activation=activation)(inputs)
+    outputs = keras.layers.Dense(10, activation="softmax")(x)
+    model = keras.Model(inputs=inputs, outputs=outputs)
     return model
