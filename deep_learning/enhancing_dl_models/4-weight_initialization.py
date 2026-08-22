@@ -15,9 +15,11 @@ def build_model_initializer_by_activation(
         initializer = keras.initializers.HeNormal()
     inputs = keras.Input(shape=(input_dim,))
     if activation == "leaky_relu":
-        x = keras.layers.Dense(hidden_units,
-                               kernel_initializer=initializer)(inputs)
-        x = keras.layers.LeakyReLU()(x)
+        x = keras.layers.Dense(
+            hidden_units,
+            kernel_initializer=initializer,
+            activation=keras.layers.LeakyReLU()
+        )(inputs)
     else:
         x = keras.layers.Dense(hidden_units, kernel_initializer=initializer,
                                activation=activation)(inputs)
