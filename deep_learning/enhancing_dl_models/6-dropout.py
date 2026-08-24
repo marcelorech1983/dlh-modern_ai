@@ -11,7 +11,7 @@ def build_model_with_dropout(input_dim, hidden_units, n_layers,
     applied after input and hidden layers."""
     inputs = keras.Input(shape=(input_dim,))
     x = keras.layers.Dropout(rate=dropout_rate_input)(inputs)
-    for i in range(n_layers - 1):
+    for i in range(n_layers):
         x = keras.layers.Dense(
             hidden_units,
             activation="relu")(x)
