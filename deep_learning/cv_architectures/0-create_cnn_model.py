@@ -18,7 +18,7 @@ def create_cnn_model(input_shape, filters, kernel_sizes,
         if pooling_type == 'max':
             model.add(keras.layers.MaxPooling2D(pool_size=(2, 2)))
         elif pooling_type == 'avg':
-            model.add(keras.layers.AveragePooling2D(poll_size=(2, 2)))
+            model.add(keras.layers.AveragePooling2D(pool_size=(2, 2)))
 
     model.add(keras.layers.Flatten())
     model.add(keras.layers.Dense(10, activation='softmax'))
