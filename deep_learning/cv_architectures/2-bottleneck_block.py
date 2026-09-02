@@ -6,8 +6,8 @@ from tensorflow import keras
 
 
 def bottleneck_block(x, filters, stride=1, downsample=False, name=None):
-    """Builds a ResNet bottleneck residual block
-    with an optional projection shortcut."""
+    """BBuilds a ResNet bottleneck residual block:
+    1x1 reduce -> 3x3 -> 1x1 expand, with a residual connection."""
     shortcut = x  # save original input for the skip connection
 
     # 1x1 conv: shrink channels
