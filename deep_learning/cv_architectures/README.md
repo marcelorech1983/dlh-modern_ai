@@ -9,12 +9,12 @@ CNN architecture pipeline with Keras/TensorFlow on Fashion MNIST: building and t
 | 0 | Create Convolutional architecture | `0-create_cnn_model.py` | Done |
 | 1 | Train CNN | `1-train_cnn.py` | Done |
 | 2 | Bottleneck Block | `2-bottleneck_block.py` | Done |
-| 3 | ResNet-101 | `3-resnet_101.py` | Not started |
+| 3 | ResNet-101 | `3-resnet_101.py` | Done |
 | 4 | Depthwise Separable Convolution Block | `4-depthwise_separable_conv.py` | Not started |
 | 5 | MobileNet Backbone | `5-mobilenet_backbone.py` | Not started |
 | 6 | MobileNetV1 | `6-mobilenetv1.py` | Not started |
 
-1 of 7 tasks complete.
+4 of 7 tasks complete.
 
 ## Dataset
 
