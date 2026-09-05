@@ -6,7 +6,6 @@ and building transfer learning pipelines using pretrained CNNs in Keras."""
 
 def unfreeze_top_layers(model, n_layers):
     """Unfreezes the last n layers of a base model for fine-tuning."""
-    base_model = model.layers[1]
-    for layer in base_model.layers[-n_layers:]:
+    for layer in model.layers[-n_layers:]:
         layer.trainable = True
     return None
