@@ -3,64 +3,17 @@
 This module provides functions for building, customizing, and training
 convolutional neural network (CNN) architectures in Keras."""
 from tensorflow import keras
-
-
-def bottleneck_block(x, filters, stride=1, downsample=False, name=None):
-    """Builds a ResNet bottleneck residual block:
-    1x1 reduce -> 3x3 -> 1x1 expand, with a residual connection."""
-    shortcut = x
-
-    y = keras.layers.Conv2D(
-        filters,
-        1,
-        strides=stride,
-        padding="same",
-        use_bias=False,
-        name=f"{name}_conv1",
-    )(x)
-    y = keras.layers.BatchNormalization(name=f"{name}_bn1")(y)
-    y = keras.layers.ReLU(name=f"{name}_relu1")(y)
-
-    y = keras.layers.Conv2D(
-        filters, 3, padding="same", use_bias=False, name=f"{name}_conv2"
-    )(y)
-    y = keras.layers.BatchNormalization(name=f"{name}_bn2")(y)
-    y = keras.layers.ReLU(name=f"{name}_relu2")(y)
-
-    y = keras.layers.Conv2D(
-        filters * 4, 1, padding="same", use_bias=False, name=f"{name}_conv3"
-    )(y)
-    y = keras.layers.BatchNormalization(name=f"{name}_bn3")(y)
-
-    if downsample:
-        shortcut = keras.layers.Conv2D(
-            filters * 4,
-            1,
-            strides=stride,
-            padding="same",
-            use_bias=False,
-            name=f"{name}_downsample_conv",
-        )(shortcut)
-        shortcut = keras.layers.BatchNormalization(
-            name=f"{name}_downsample_bn"
-        )(shortcut)
-
-    out = keras.layers.Add(name=f"{name}_add")([y, shortcut])
-    out = keras.layers.ReLU(name=f"{name}_out")(out)
-
-    return out
+bottleneck_block = __import__('2-bottleneck_block').bottleneck_block
 
 
 def make_layer(x, blocks, filters, stride=1, name=None):
     """Stacks one ResNet stage: a first block with a projection
     shortcut, then identity blocks."""
-    x = bottleneck_block(
-        x, filters, stride=stride, downsample=True, name=f"{name}_block1"
-    )
+    x = bottleneck_block(x, filters, stride=stride, downsample=True,
+                         name=f'{name}_block1')
     for i in range(1, blocks):
-        x = bottleneck_block(
-            x, filters, stride=1, downsample=False, name=f"{name}_block{i+1}"
-        )
+        x = bottleneck_block(x, filters, stride=1, downsample=False,
+                             name=f'{name}_block{i+1}')
     return x
 
 
@@ -68,23 +21,20 @@ def build_resnet101(input_shape=(224, 224, 3), num_classes=1000):
     """Builds the ResNet-101 architecture."""
     inputs = keras.Input(shape=input_shape)
 
-    x = keras.layers.Conv2D(
-        64, 7, strides=2, padding="same", use_bias=False, name="conv1"
-    )(inputs)
-    x = keras.layers.BatchNormalization(name="bn1")(x)
-    x = keras.layers.ReLU(name="relu1")(x)
-    x = keras.layers.MaxPooling2D(
-        3, strides=2, padding="same", name="maxpool"
-    )(x)
+    x = keras.layers.Conv2D(64, 7, strides=2, padding='same',
+                            use_bias=False, name='conv1')(inputs)
+    x = keras.layers.BatchNormalization(name='bn1')(x)
+    x = keras.layers.ReLU(name='relu1')(x)
+    x = keras.layers.MaxPooling2D(3, strides=2, padding='same',
+                                  name='maxpool')(x)
 
-    x = make_layer(x, 3, 64, stride=1, name="layer1")
-    x = make_layer(x, 4, 128, stride=2, name="layer2")
-    x = make_layer(x, 23, 256, stride=2, name="layer3")
-    x = make_layer(x, 3, 512, stride=2, name="layer4")
+    x = make_layer(x, 3, 64, stride=1, name='layer1')
+    x = make_layer(x, 4, 128, stride=2, name='layer2')
+    x = make_layer(x, 23, 256, stride=2, name='layer3')
+    x = make_layer(x, 3, 512, stride=2, name='layer4')
 
-    x = keras.layers.GlobalAveragePooling2D(name="avgpool")(x)
-    outputs = keras.layers.Dense(num_classes, activation="softmax", name="fc")(
-        x
-    )
+    x = keras.layers.GlobalAveragePooling2D(name='avgpool')(x)
+    outputs = keras.layers.Dense(num_classes, activation='softmax',
+                                 name='fc')(x)
 
-    return keras.Model(inputs, outputs, name="resnet101")
+    return keras.Model(inputs, outputs, name='resnet101')
