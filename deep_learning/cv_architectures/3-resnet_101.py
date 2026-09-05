@@ -2,7 +2,6 @@
 """Computer Vision Architectures.
 This module provides functions for building, customizing, and training
 convolutional neural network (CNN) architectures in Keras."""
-
 from tensorflow import keras
 
 
