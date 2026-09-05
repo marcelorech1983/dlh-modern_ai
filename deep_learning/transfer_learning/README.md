@@ -6,13 +6,13 @@ Transfer learning pipeline with Keras/TensorFlow on CIFAR-10 and Caltech 101: bu
 
 | # | Task | File | Status |
 |---|---|---|---|
-| 0 | Frozen Feature Extractor | `0-frozen_extractor.py` | Not started |
-| 1 | Classification Head | `1-classification_head.py` | Not started |
-| 2 | Unfreezing Layers | `2-unfreeze_top.py` | Not started |
+| 0 | Frozen Feature Extractor | `0-frozen_extractor.py` | Done |
+| 1 | Classification Head | `1-classification_head.py` | Done |
+| 2 | Unfreezing Layers | `2-unfreeze_top.py` | Done |
 | 3 | Data Augmentation | `3-data_aug.py` | Not started |
 | 4 | Knowledge Transfer: Taming the 101 | `4-transfer_101.py` | Not started |
 
-0 of 5 tasks complete.
+3 of 5 tasks complete.
 
 ## Dataset
 
