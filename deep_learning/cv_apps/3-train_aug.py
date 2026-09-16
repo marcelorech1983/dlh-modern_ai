@@ -9,8 +9,8 @@ from ultralytics import YOLO
 def train_with_augmentation(
         data, model_path="yolov8n.pt", epochs=50, imgsz=640, batch=16,
         augmentation=True, yolo_aug_params=None,
-        albumentations_transforms=None, save=True, plots=True,
-        verbose=True):
+        albumentations_transforms=None, save=False, plots=False,
+        verbose=False):
     """Trains a YOLO model using configurable native
     or custom Albumentations augmentations. Executes model training with
     specified hyperparameters and returns the model and results."""
