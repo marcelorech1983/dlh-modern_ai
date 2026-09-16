@@ -9,11 +9,11 @@ Object detection pipeline with YOLOv8, Albumentations, and OpenCV on a Pascal VO
 | 0 | Download & Organize | `0-prep_data.py` | Done |
 | 1 | Basic Transformations | `1-basic_aug.py` | Done |
 | 2 | Albumentations custom Transformations | `2-custom_aug.py` | Done |
-| 3 | Train & Augment | `3-train_aug.py` | Not started |
+| 3 | Train & Augment | `3-train_aug.py` | Done |
 | 4 | Hyperparameter Tuning | `4-tune_train.py` | Not started |
 | 5 | Inference Tuning | `5-tune_inference.py` | Not started |
 
-3 of 6 tasks complete.
+4 of 6 tasks complete.
 
 ## Dataset
 
