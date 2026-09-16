@@ -15,6 +15,14 @@ def train_with_augmentation(
     or custom Albumentations augmentations. Executes model training with
     specified hyperparameters and returns the model and results."""
     yolo_model = YOLO(model_path)
+    no_aug = {
+        "hsv_h": 0.0, "hsv_s": 0.0, "hsv_v": 0.0,
+        "degrees": 0.0, "translate": 0.0, "scale": 0.0,
+        "shear": 0.0, "perspective": 0.0,
+        "flipud": 0.0, "fliplr": 0.0, "bgr": 0.0,
+        "mosaic": 0.0, "mixup": 0.0, "cutmix": 0.0, "copy_paste": 0.0,
+        "auto_augment": None, "erasing": 0.0,
+    }
 
     train_args = {
         "data": data,
@@ -26,7 +34,7 @@ def train_with_augmentation(
         "verbose": verbose,
     }
     if not augmentation:
-        train_args.update(NO_AUG)
+        train_args.update(no_aug)
     if yolo_aug_params:
         train_args.update(yolo_aug_params)
     if albumentations_transforms:
