@@ -28,5 +28,4 @@ def basic_aug(image, bboxes, labels):
     return (
         result["image"],
         np.array(result["bboxes"]),
-        [int(label) for label in result["labels"]],
-    )
+        list(result["labels"]))
