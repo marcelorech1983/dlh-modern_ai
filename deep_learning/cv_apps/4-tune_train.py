@@ -20,12 +20,16 @@ def tune_hyperparameters():
     tuner_model.tune(data=data, iterations=15, epochs=10, plots=False)
 
     # tune_dir is a guess, not an order. YOLO decided this path on
-    # its own; we're just going to look where we expect it saved.
+    # its own.
     best_hyp = YAML.load(f"{tune_dir}/best_hyperparameters.yaml")
     best_checkpoint = f"{tune_dir}/weights/best.pt"
 
+    # The tuner writes every value as a float, but close_mosaic must
+    # be a whole int or model.train() rejects it.
+    if "close_mosaic" in best_hyp:
+        best_hyp["close_mosaic"] = int(best_hyp["close_mosaic"])
+
     # Phase 2: continue the winning trial with its own settings,
-    # instead of starting a new model from zero.
     final_model = YOLO(best_checkpoint)
     final_model.train(
         data=data,
