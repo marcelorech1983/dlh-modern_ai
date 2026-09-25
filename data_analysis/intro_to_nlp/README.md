@@ -6,8 +6,8 @@ Text preprocessing and feature extraction pipeline with NLTK, scikit-learn, and 
 
 | # | Task | File | Status |
 |---|---|---|---|
-| 0 | Basic Exploration | `0-explore_data.py` | To do |
-| 1 | Text normalization | `1-clean_text.py` | To do |
+| 0 | Basic Exploration | `0-explore_data.py` | Done |
+| 1 | Text normalization | `1-clean_text.py` | Done |
 | 2 | Tokenization | `2-tokenize.py` | To do |
 | 3 | Stopwords Removal | `3-remove_stopwords.py` | To do |
 | 4 | Filtering | `4-filter_tokens.py` | To do |
