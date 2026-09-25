@@ -16,16 +16,17 @@ def remove_stopwords(tokens, language="english", extra_words=None,
     # add the extra words
     if extra_words:
         for word in extra_words:
-            stop_words.add(word)
+            stop_words.add(word.lower())
 
     # take out the words we want to keep
     if keep_words:
         for word in keep_words:
-            stop_words.discard(word)
+            stop_words.discard(word.lower())
 
     # keep only the tokens that are not stopwords
+    # compare in lowercase, so "IS" is removed like "is"
     result = []
     for token in tokens:
-        if token not in stop_words:
+        if token.lower() not in stop_words:
             result.append(token)
     return result
