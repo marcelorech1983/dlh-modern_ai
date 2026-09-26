@@ -31,5 +31,6 @@ def word2vec_embeddings(corpus_tokens, vector_size=100, window=5,
         else:
             rows.append(np.zeros(vector_size))
 
-    X = np.array(rows)
+    # gensim vectors are float32, the task wants float64
+    X = np.array(rows, dtype=np.float64)
     return X, model
