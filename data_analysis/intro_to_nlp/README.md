@@ -8,19 +8,19 @@ Text preprocessing and feature extraction pipeline with NLTK, scikit-learn, and 
 |---|---|---|---|
 | 0 | Basic Exploration | `0-explore_data.py` | Done |
 | 1 | Text normalization | `1-clean_text.py` | Done |
-| 2 | Tokenization | `2-tokenize.py` | To do |
-| 3 | Stopwords Removal | `3-remove_stopwords.py` | To do |
-| 4 | Filtering | `4-filter_tokens.py` | To do |
-| 5 | Lemma vs Stem | `5-normalize_tokens.py` | To do |
-| 6 | N-gram | `6-ngram.py` | To do |
-| 7 | Word Frequency Distribution | `7-freq.py` | To do |
-| 8 | Wordclouds | `8-wordcloud.py` | To do |
-| 9 | BoW | `10-bow.py` | To do |
-| 10 | TF-IDF | `11-tf_idf.py` | To do |
-| 11 | Word2Vec | `12-word2vec.py` | To do |
-| 12 | FastText | `13-fasttext.py` | To do |
+| 2 | Tokenization | `2-tokenize.py` | Done |
+| 3 | Stopwords Removal | `3-remove_stopwords.py` | Done |
+| 4 | Filtering | `4-filter_tokens.py` | Done |
+| 5 | Lemma vs Stem | `5-normalize_tokens.py` | Done |
+| 6 | N-gram | `6-ngram.py` | Done |
+| 7 | Word Frequency Distribution | `7-freq.py` | Done |
+| 8 | Wordclouds | `8-wordcloud.py` | Done |
+| 9 | BoW | `10-bow.py` | Done |
+| 10 | TF-IDF | `11-tf_idf.py` | Done |
+| 11 | Word2Vec | `12-word2vec.py` | Done |
+| 12 | FastText | `13-fasttext.py` | Done |
 
-0 of 13 tasks complete.
+13 of 13 tasks complete.
 
 ## Dataset
 
