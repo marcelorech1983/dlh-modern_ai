@@ -6,16 +6,16 @@ This project uses pre-trained Hugging Face models to see how the three main LLM 
 
 | # | Task | File | Status |
 |---|---|---|---|
-| 0 | (MLM) Load RoBERTa | `0-load_mlm.py` | To do |
-| 1 | (MLM) Tokenization | `1-tokenization.py` | To do |
-| 2 | (MLM) Get Mask Indices | `2-get_mask_index.py` | To do |
-| 3 | (MLM) Compute Mask Logits | `3-compute_mask_logits.py` | To do |
-| 4 | (MLM) Decode Mask Predictions | `4-decode_mask_predictions.py` | To do |
-| 5 | (Encoder-Only) Fill Mask | `5-fill_mask.py` | To do |
-| 6 | (Encoder-Decoder) Translation | `6-translate_text.py` | To do |
-| 7 | (Decoder-Only) Text Generation | `7-text_generator.py` | To do |
-| 8 | Performing Computer Vision Tasks | `8-image_classifier.py` | To do |
-| 9 | VLM for Image Captioning | `9-image_captioner.py` | To do |
+| 0 | (MLM) Load RoBERTa | `0-load_mlm.py` | Done |
+| 1 | (MLM) Tokenization | `1-tokenization.py` | Done |
+| 2 | (MLM) Get Mask Indices | `2-get_mask_index.py` | Done |
+| 3 | (MLM) Compute Mask Logits | `3-compute_mask_logits.py` | Done |
+| 4 | (MLM) Decode Mask Predictions | `4-decode_mask_predictions.py` | Done |
+| 5 | (Encoder-Only) Fill Mask | `5-fill_mask.py` | Done |
+| 6 | (Encoder-Decoder) Translation | `6-translate_text.py` | Done |
+| 7 | (Decoder-Only) Text Generation | `7-text_generator.py` | Done |
+| 8 | Performing Computer Vision Tasks | `8-image_classifier.py` | Done |
+| 9 | VLM for Image Captioning | `9-image_captioner.py` | Done |
 
 0 of 10 tasks complete.
 
