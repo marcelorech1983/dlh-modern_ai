@@ -5,7 +5,7 @@ from transformers import RobertaTokenizer
 
 def tokenize_text(model_name, sentence, padding=True):
     """Tokenize the sentence and return the tokenizer and the inputs."""
-    # load the tokenizer that matches the model
+    # tokenizer has to match the model, not just any RoBERTa one
     tokenizer = RobertaTokenizer.from_pretrained(model_name)
 
     # text -> token ids, as PyTorch tensors

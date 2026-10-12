@@ -27,7 +27,7 @@ This project uses pre-trained Hugging Face models to see how the three main LLM 
 ## Requirements
 
 - Python 3.11, pycodestyle 2.14.0
-- torch 2.8.0+cpu, transformers 4.56.1, sentence-transformers 5.1.0, tiktoken 0.11.0, sentencepiece 0.2.1, tabulate 0.9.0
+- torch 2.8.0+cpu, transformers 4.56.1, sentence-transformers 5.1.0, tiktoken 0.11.0, sentencepiece 0.2.2, tabulate 0.9.0
 - Every module and function documented
 - Files start with `#!/usr/bin/env python3`, end with a newline, and are executable
 

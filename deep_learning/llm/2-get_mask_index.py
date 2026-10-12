@@ -7,7 +7,7 @@ def get_mask_index(inputs, tokenizer):
     # token ids of the first (and only) sentence
     ids = inputs["input_ids"][0]
 
-    # look at each position and keep the ones with the mask id
+    # keep the positions where the id is <mask>
     mask_indices = []
     for i in range(len(ids)):
         if int(ids[i]) == tokenizer.mask_token_id:
